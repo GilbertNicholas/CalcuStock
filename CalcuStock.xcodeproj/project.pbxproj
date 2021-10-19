@@ -14,6 +14,7 @@
 		02812751271F28D6009320FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02812750271F28D6009320FE /* Assets.xcassets */; };
 		02812754271F28D6009320FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02812752271F28D6009320FE /* LaunchScreen.storyboard */; };
 		0281275E271F3393009320FE /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0281275D271F3393009320FE /* SearchTableViewCell.swift */; };
+		02812761271F386E009320FE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02812760271F386E009320FE /* APIService.swift */; };
 		327837641B2AAD30CEA5CDEA /* Pods_CalcuStock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED12A0F503BB373C2A00036 /* Pods_CalcuStock.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		02812753271F28D6009320FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02812755271F28D6009320FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0281275D271F3393009320FE /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		02812760271F386E009320FE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9ED12A0F503BB373C2A00036 /* Pods_CalcuStock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalcuStock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD874A0D8281CC8CF35690C0 /* Pods-CalcuStock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalcuStock.release.xcconfig"; path = "Target Support Files/Pods-CalcuStock/Pods-CalcuStock.release.xcconfig"; sourceTree = "<group>"; };
 		FE67173D728978FE7BF7C2C8 /* Pods-CalcuStock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalcuStock.debug.xcconfig"; path = "Target Support Files/Pods-CalcuStock/Pods-CalcuStock.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		02812746271F28D3009320FE /* CalcuStock */ = {
 			isa = PBXGroup;
 			children = (
+				0281275F271F3860009320FE /* Service */,
 				0281275C271F3378009320FE /* controller */,
 				0281275B271F3370009320FE /* view */,
 				02812747271F28D3009320FE /* AppDelegate.swift */,
@@ -91,6 +94,14 @@
 				0281274B271F28D3009320FE /* SearchTableViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		0281275F271F3860009320FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				02812760271F386E009320FE /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		5FD6D2D62524CB479635F6FE /* Frameworks */ = {
@@ -226,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0281274C271F28D3009320FE /* SearchTableViewController.swift in Sources */,
+				02812761271F386E009320FE /* APIService.swift in Sources */,
 				0281275E271F3393009320FE /* SearchTableViewCell.swift in Sources */,
 				02812748271F28D3009320FE /* AppDelegate.swift in Sources */,
 				0281274A271F28D3009320FE /* SceneDelegate.swift in Sources */,
