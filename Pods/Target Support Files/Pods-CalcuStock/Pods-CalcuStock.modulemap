@@ -1,0 +1,6 @@
+framework module Pods_CalcuStock {
+  umbrella header "Pods-CalcuStock-umbrella.h"
+
+  export *
+  module * { export * }
+}

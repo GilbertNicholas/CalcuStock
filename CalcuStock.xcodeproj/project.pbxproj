@@ -13,6 +13,7 @@
 		0281274F271F28D3009320FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0281274D271F28D3009320FE /* Main.storyboard */; };
 		02812751271F28D6009320FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02812750271F28D6009320FE /* Assets.xcassets */; };
 		02812754271F28D6009320FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02812752271F28D6009320FE /* LaunchScreen.storyboard */; };
+		327837641B2AAD30CEA5CDEA /* Pods_CalcuStock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED12A0F503BB373C2A00036 /* Pods_CalcuStock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		02812750271F28D6009320FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02812753271F28D6009320FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02812755271F28D6009320FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ED12A0F503BB373C2A00036 /* Pods_CalcuStock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalcuStock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD874A0D8281CC8CF35690C0 /* Pods-CalcuStock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalcuStock.release.xcconfig"; path = "Target Support Files/Pods-CalcuStock/Pods-CalcuStock.release.xcconfig"; sourceTree = "<group>"; };
+		FE67173D728978FE7BF7C2C8 /* Pods-CalcuStock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalcuStock.debug.xcconfig"; path = "Target Support Files/Pods-CalcuStock/Pods-CalcuStock.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327837641B2AAD30CEA5CDEA /* Pods_CalcuStock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				02812746271F28D3009320FE /* CalcuStock */,
 				02812745271F28D3009320FE /* Products */,
+				B3628DAA5C514B9F4B907A92 /* Pods */,
+				5FD6D2D62524CB479635F6FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = CalcuStock;
 			sourceTree = "<group>";
 		};
+		5FD6D2D62524CB479635F6FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9ED12A0F503BB373C2A00036 /* Pods_CalcuStock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3628DAA5C514B9F4B907A92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE67173D728978FE7BF7C2C8 /* Pods-CalcuStock.debug.xcconfig */,
+				AD874A0D8281CC8CF35690C0 /* Pods-CalcuStock.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02812758271F28D6009320FE /* Build configuration list for PBXNativeTarget "CalcuStock" */;
 			buildPhases = (
+				A2EB14FD6E9C69CBD61B5DB4 /* [CP] Check Pods Manifest.lock */,
 				02812740271F28D3009320FE /* Sources */,
 				02812741271F28D3009320FE /* Frameworks */,
 				02812742271F28D3009320FE /* Resources */,
+				B1817EBAF35D1AF1AA5AC0AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2EB14FD6E9C69CBD61B5DB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalcuStock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1817EBAF35D1AF1AA5AC0AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalcuStock/Pods-CalcuStock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalcuStock/Pods-CalcuStock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalcuStock/Pods-CalcuStock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02812740271F28D3009320FE /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		02812759271F28D6009320FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE67173D728978FE7BF7C2C8 /* Pods-CalcuStock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		0281275A271F28D6009320FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD874A0D8281CC8CF35690C0 /* Pods-CalcuStock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
