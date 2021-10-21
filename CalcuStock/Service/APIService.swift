@@ -14,7 +14,7 @@ struct APIService {
         return keys.randomElement() ?? ""
     }
     
-    let keys = ["IFFWLCR7SBP9RD9O", "M8ULLHUFLZKVEIV5", "CZ4THDIWEXPV9Q3F", "57IYZEF73WWXY8XL"]
+    let keys = ["IFFWLCR7SBP9RD9O", "M8ULLHUFLZKVEIV5", "CZ4THDIWEXPV9Q3F", "57IYZEF73WWXY8XL", "IPEHFGM1DBYFAN4Q"]
     
     func fetchSymbolsPublisher(keywords: String) -> AnyPublisher<SearchResults, Error> {
         
